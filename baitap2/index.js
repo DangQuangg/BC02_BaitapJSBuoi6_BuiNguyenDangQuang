@@ -1,17 +1,15 @@
 var xTxtEl=document.getElementById("xTxt")
 var nTxtEl=document.getElementById("nTxt")
 var ketQuaEl=document.getElementById("ketQua")
-var xTxtValue=xTxtEl.value*1
-var nTxtValue=nTxtEl.value*1
-var s=0
- 
-var t= 1
 ketQuaEl.addEventListener("click",function(){
-
-    for( i = 1; i <= nTxtValue; i++){
-        t = t * xTxtValue;
-        s += t;
+    var x=xTxtEl.value*1
+    var n=nTxtEl.value*1
+    t=1
+    s=0
+    for( let i = 1; i <= n; i++){
+        t = t * x;
+        s = s+t;
     }
-console.log({nTxtValue},{xTxtValue});
+    document.getElementById("inKQ").innerHTML="Tổng S là: " + s
 })
     
